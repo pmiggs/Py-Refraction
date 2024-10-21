@@ -1,11 +1,11 @@
 <h2>Description</h2>
-This was a major project I did during my undergraduate. It was the final test to get into one of the prominent research labs in my college (Physics). Essentially, I was an applicant and the problem reads as follows:<br/>
+This is another project I did during my undergraduate. It was part of a series of coding tests to get into one of the prominent research labs in my college (Physics). Essentially, I was an applicant and the problem reads as follows:<br/>
 <kbd>
-<img src="Py_Refraction_Problem_Statement.png" width="410" height="410">
+<img src="Py_Refraction_Problem_Statement.png" width="320" height="410">
 </kbd>
 <br/>
 <br/>
-It was all fine and dandy until I saw we were limited to using NumPy and Matplotlib. They were preventing us from using specialized libraries likely to assess our core programming know-how and problem-solving capabilities.
+The problem was straightforward, and this program is useful for simulations in ray optics.
 
 <h2>Programming Proper (WIP)</h2>
 The procedure I formulated in my head was as follows. In reverse engineering fashion,
