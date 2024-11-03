@@ -5,27 +5,24 @@ This was another project I did in my undergraduate program. I was an applicant t
 </kbd>
 <br/>
 <br/>
-The problem was clear, and this exercise is always tackled in the foundational lessons of ray optics.
+This exercise is always tackled in the foundational lessons of ray optics.
 
 <h2>Programming Proper (WIP)</h2>
-It is a straightforward application of Snell's Law:
-$n_1 \sin \theta_1 = n2 \sin \theta_2$
+The program is a straightforward application of Snell's Law:
 
-<img src="Methodology.png" width="410" height="130">
+$n_1 \sin \theta_1 = n_2 \sin \theta_2$
 
-In hindsight, this would have been much easier and efficient if we were taught algorithms for these problems, e.g. depth-first search, breadth-first search, A* search, etc. However, not knowing these things also served as a means for us to set down our own logic or approach, i.e. our own "algorithm".
-
-Starting out with the packages to be used for the entire code:
+As always, start out with the packages:
 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
 ```
 
-First is to write a code that uploads the image into the program and convert it into binary. Thankfully, the image was given in black and white so there was no need to recolor or preprocess.
+First is to 
 
 ```python
-def load_maze(image_path):
+def placeholder(image_path):
     img = plt.imread(image_path)
     maze = (img == 0).astype(int)
     return maze
