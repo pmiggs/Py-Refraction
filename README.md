@@ -1,7 +1,7 @@
 <h2>Description</h2>
 This was another project I did in my undergraduate program. I was an applicant to one of the prominent research labs in Physics, and this was part of a series of their coding tests.<br/>
 <kbd>
-<img src="Py_Refraction_Problem_Statement.png" width="340" height="430">
+<img src="Py_Refraction_Problem_Statement.png" width="370" height="460">
 </kbd>
 <br/>
 <br/>
@@ -9,10 +9,7 @@ The problem was clear, and this exercise is always tackled in the foundational l
 
 <h2>Programming Proper (WIP)</h2>
 It is a straightforward application of Snell's Law:
-
-```math
-n_1 \sin \theta_1 = n2 \sin \theta_2
-```
+$n_1 \sin \theta_1 = n2 \sin \theta_2$
 
 <img src="Methodology.png" width="410" height="130">
 
