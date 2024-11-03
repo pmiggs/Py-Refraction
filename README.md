@@ -1,16 +1,18 @@
 <h2>Description</h2>
-This is another project I did during my undergraduate. It was part of a series of coding tests to get into one of the prominent research labs in my college (Physics). Essentially, I was an applicant and the problem reads as follows:<br/>
+This was another project I did in my undergraduate program. I was an applicant to one of the prominent research labs in Physics, and this was part of a series of their coding tests.<br/>
 <kbd>
-<img src="Py_Refraction_Problem_Statement.png" width="320" height="410">
+<img src="Py_Refraction_Problem_Statement.png" width="330" height="420">
 </kbd>
 <br/>
 <br/>
-The problem was straightforward, and this program is useful for simulations in ray optics.
+The problem was clear, and this exercise is tackled in the foundational teachings of ray optics.
 
 <h2>Programming Proper (WIP)</h2>
-The procedure I formulated in my head was as follows. In reverse engineering fashion,
+It is a straightforward application of Snell's Law:
 
-<img src="Methodology.png" width="410" height="130">
+```math
+n_1 \sin \theta_1 = n2 \sin \theta_2
+```<img src="Methodology.png" width="410" height="130">
 
 In hindsight, this would have been much easier and efficient if we were taught algorithms for these problems, e.g. depth-first search, breadth-first search, A* search, etc. However, not knowing these things also served as a means for us to set down our own logic or approach, i.e. our own "algorithm".
 
