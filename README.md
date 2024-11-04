@@ -55,23 +55,10 @@ Next, $\theta_N$ must be solved:
 
 ```python
 theta_N = [15]                    # first value must be given
-
-for i in n_N:
-
-while len(y_N) <= len(n_N):
-        y_N.append(y[-1] + 1/len(n_N))
-y_N.sort(reverse = True)                  # since we start at y = 1 and end at y = 0
-
-x_N = 
+[WIP]
 ```
 
-```python
-def placeholder(image_path):
-    img = plt.imread(image_path)
-    maze = (img == 0).astype(int)
-    return maze
-```
-
+[WIP]
 For each pixel, the code checks if the value is black or white. I then programmed it to follow the convention suggested in the problem where 1 will be the walls and 0 will be the path.
 
 Calling out the maze function now, it looks like so (albeit truncated):
