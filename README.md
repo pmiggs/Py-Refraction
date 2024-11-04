@@ -5,7 +5,7 @@ This was another project I did in my undergraduate program. I was an applicant t
 </kbd>
 <br/>
 <br/>
-This exercise is always tackled in the foundational lessons of ray optics.
+This topic is always tackled in the foundational lessons of ray optics.
 
 <h2>Programming Proper (WIP)</h2>
 The program is a straightforward application of Snell's Law:
@@ -14,13 +14,13 @@ $n_1 \sin{\theta_1} = n_2 \sin{\theta_2}$
 
 $n_N \sin{\theta_N} = n_{N+1} \sin{\theta_{N+1}}$ (a more useful general form)
 
-We approach this problem through the use of x-y coordinates. Meaning, the ray can be traced by mapping out the points starting from its incident $(x_1,y_1) = (0,1)$ down to the next point where the refraction index changes, and so forth for multiple $n_N$.
+We approach this problem through the use of x-y coordinates. Meaning, the ray can be traced by mapping out the points starting from its incident $(x_1,y_1) = (0,1)$ down to the next point where the refractive index changes, and so forth for multiple $n_N$.
 
 To get a grasp, consider item (a). From Snell's law, we can compute the angle of refraction $\theta_2$ at $n_2$:
 
 $\theta_2 = \sin^{-1}\left(\frac{n_1 \sin{\theta_1}}{n_2}\right)$
 
-From the diagram, we know that $(x_1, y_1)$ is $(0,1)$. Assuming that y is evenly distributed across varying refraction indices, then $y_N = 1/N$ and $y_{-1} = 0$. In summary, these are the variables that we need to solve to be able to trace the ray:
+From the diagram, we know that $(x_1, y_1)$ is $(0,1)$. Assuming that y is evenly distributed across varying refractive indices, then $y_N = 1/N$ and $y_{-1} = 0$. In summary, these are the variables that we need to solve to be able to trace the ray:
 
 <kbd>
 <img src="approach_1.png" width="370" height="200">
