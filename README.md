@@ -42,20 +42,21 @@ Let's start with $y_N$. Given that it is evenly distributed, then it is highly d
 
 ```python
 y_N = [0, 1, 1/len(n_N)]                    # y = 0, 1 for our extrema
-                                        # y = 1/len(n) for the distance(s) in between
+                                            # y = 1/len(n) for the distance(s) in between
 
 while len(y_N) <= len(n_N):
         y_N.append(y[-1] + 1/len(n_N))
-y_N.sort(reverse = True)                  # since we start at y = 1 and end at y = 0
+y_N.sort(reverse = True)                    # since we start at y = 1 and end at y = 0
 ```
 
-The pre-requisite here is our input $n_N$ must be an array, where the first element is the starting refractive index and the final element is the last index.
+The pre-requisite here is our inputs $n_N$ must be in an array/list, where the first element is the starting refractive index and the final element is the last index.
 
 Next, $\theta_N$ must be solved:
 
 ```python
-theta_N = [15]                    # first value must be given
-[WIP]
+theta_N = [15]                              # initialize first value (must be given)
+thetas_N = [i+j for i, j in zip(n_N, y_N)]
+theta_N.append(thetas_N)                    # our final list of theta_N
 ```
 
 [WIP]
