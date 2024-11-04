@@ -23,14 +23,10 @@ $\theta_2 = \sin^{-1}\left(\frac{n_1 \sin\theta_1}{n_2}\right)$
 From the diagram, we know that $(x_1, y_1)$ is $(0,1)$. Assuming that y is evenly distributed across varying refraction indices, then $y_N = 1/N$ and $y_{-1} = 0$. In summary, these are the variables that we need to solve to be able to trace the ray (see figure):
 
 <kbd>
-<img src="approach_1.png">
+<img src="approach_1.png" width="370" height="200">
 </kbd>
 
-$(x_1, y_1) = (0, 1)$
-
-$(x_2, y_2) = (x_2, 0.5)$
-
-$(x_3, y_3) = (x_3, 0)$
+$(x_1, y_1) = (0, 1), (x_2, y_2) = (x_2, 0.5), (x_3, y_3) = (x_3, 0)$
 
 
 
