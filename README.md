@@ -38,7 +38,7 @@ $\sin{\theta_N} = \frac{x_N}{y_N} ⟹ x_N = y_N \sin{\theta_N}$
 
 From above, we must be able to provide $y_N$ and $\theta_N$ to solve for $x_N$.
 
-Let's start with $y_N$. Given that it is evenly distributed, then it is highly dependent on the number of refractive indices n_N:
+Let's start with $y_N$. Given that our diagram is evenly distributed vertically, then y is highly dependent on the number of refractive indices $n_N$:
 
 ```python
 y_N = [0, 1, 1/len(n_N)]                    # y = 0, 1 for our extrema
