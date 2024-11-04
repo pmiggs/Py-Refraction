@@ -20,7 +20,7 @@ To get a grasp, consider item (a). From Snell's law, we can compute the angle of
 
 $\theta_2 = \sin^{-1}\left(\frac{n_1 \sin{\theta_1}}{n_2}\right)$
 
-From the diagram, we know that $(x_1, y_1)$ is $(0,1)$. Assuming that y is evenly distributed across varying refractive indices, then $y_N = 1/N$ with $y_1 = 1$ and $y_{-1} = 0$. In summary, these are the variables that we need to solve to be able to trace the ray:
+From the diagram, we know that $(x_1, y_1)$ is $(0,1)$. Assuming that y is evenly distributed across varying refractive indices, then $y_N = 1/N$ with $y_1 = 1$ and $y_{last} = 0$. In summary, these are the variables that we need to solve to be able to trace the ray:
 
 <kbd>
 <img src="approach_1.png" width="370" height="200">
@@ -38,24 +38,24 @@ $\sin{\theta_N} = \frac{x_N}{y_N} ⟹ x_N = y_N \sin{\theta_N}$
 
 From above, we must be able to provide $y_N$ and $\theta_N$ to solve for $x_N$.
 
-Let's start with $y_N$. Given that our diagram is evenly distributed vertically, then y is highly dependent on the number of refractive indices $n_N$:
+Let's start with $y_N$. Again, since is evenly distributed vertically y is strictly dependent on the number of refractive indices $n_N$:
 
 ```python
 y_N = [0, 1, 1/len(n_N)]                    # y = 0, 1 for our extrema
-                                            # y = 1/len(n) for the distance(s) in between
+                                            # y = 1/len(n_N) for the y's in the middle
 
 while len(y_N) <= len(n_N):
-        y_N.append(y[-1] + 1/len(n_N))
+    y_N.append(y[-1] + 1/len(n_N))
 y_N.sort(reverse = True)                    # since we start at y = 1 and end at y = 0
 ```
 
-The pre-requisite here is our inputs $n_N$ must be in an array/list, where the first element is the starting refractive index and the final element is the last index.
+The pre-requisite here is the $n_N$ must be in an array/list form when inputted, where the first element is the starting refractive index and the final element is the last index.
 
 Next, $\theta_N$ must be solved:
 
 ```python
-theta_N = [15]                              # initialize first value (must be given)
-thetas_N = [i+j for i, j in zip(n_N, y_N)]
+theta_init = [15]                           # initialize first value (must be given)
+theta_N = [i+j for i, j in zip(n_N, y_N)]
 theta_N.append(thetas_N)                    # our final list of theta_N
 ```
 
