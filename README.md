@@ -36,11 +36,14 @@ Here, $x_N$ can be solved mathematically:
 
 $\sin{\theta_N} = \frac{x_N}{y_N} ⟹ x_N = y_N \sin{\theta_N}$
 
-As always, start out with the packages:
+Let's start with $y_N$. Given that it is distributed evenly, then it is highly dependent on the number of refractive indices N:
 
 ```python
-import numpy as np
-import matplotlib.pyplot as plt
+y = [0, 1, 1/len(N)]                # y = 0, 1 for start & end points, while y = 1/len(N) for distance(s) in-between
+
+while len(y) <= len(N):
+        y.append(y[-1] + 1/len(N))
+y.sort(reverse = True)
 ```
 
 First is to 
