@@ -26,7 +26,7 @@ Proposed Schematic  |  Variables Required
 
 Here, $x_N$ can be solved mathematically:
 
-$\tan{\theta_N} = \frac{x_N}{y_N} ⟹ x_N = y_N \tan{\theta_N}$
+$\tan{\theta_1} = \frac{x_2}{y_1-y_2}$ <br/> $x_2 = (y_1-y_2) \cdot \tan{\theta_1}$ <br/> $x_{N+1} = (y_N-y_{N+1}) \cdot \tan{\theta_N}$  (a more useful form)
 
 From above, we must be able to provide all $y_N$ and $\theta_N$ to solve for $x_N$.
 
