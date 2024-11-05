@@ -26,7 +26,7 @@ Proposed Schematic  |  Variables Required
 
 Here, $x_N$ can be solved mathematically:
 
-$\sin{\theta_N} = \frac{x_N}{y_N} ⟹ x_N = y_N \sin{\theta_N}$
+$\tan{\theta_N} = \frac{x_N}{y_N} ⟹ x_N = y_N \tan{\theta_N}$
 
 From above, we must be able to provide all $y_N$ and $\theta_N$ to solve for $x_N$.
 
@@ -51,6 +51,8 @@ print(y_N)
 Next, $\theta_N$ must be solved:
 
 ```python
+import numpy as np
+
 theta_init = 15                             # initial theta; given
 theta_N = [i+j for i, j in zip(n_N, y_N)]
 theta_N.append(thetas_N)                    # our final list of theta_N
