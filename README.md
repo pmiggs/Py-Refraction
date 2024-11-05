@@ -1,7 +1,7 @@
 <h2>Description</h2>
 This was another project I did during my undergraduate program. I was an applicant to one of the prominent research labs in Physics, and this was part of a series of their coding tests.<br/>
 <kbd>
-<img src="Py_Refraction_Problem_Statement.png" width="370" height="460">
+<img src="Py_Refraction_Problem_Statement.png" width="500" height="600">
 </kbd>
 <br/>
 <br/>
@@ -48,13 +48,20 @@ print(y_N)
 [1, 0.5, 0]
 ```
 
-Next, $\theta_N$ must be solved:
+Next, we need values for $\theta_N$. Although the first value, $\theta_1$ can already be used to get $x_1$, it's wiser to write the code now for its succeeding values:
 
 ```python
 import numpy as np
 
-theta_init = 15                             # initial theta; given
-theta_N = [i+j for i, j in zip(n_N, y_N)]
-theta_N.append(thetas_N)                    # our final list of theta_N
+theta_N = [0.26]                            # given, convert to radians
+n_N = [1.0, 1.30]
+
+while len(theta_N) < len(n_N):
+    for i in theta_N:
+        if i <= -1 or i >= 1:               # limits of sine function 
+            continue
+    for j in range(len(n_N)-1):
+        theta_next = np.arcsin(j * np.sin(i) / n_N[j+1])
+        theta_N.append(theta_next)
 ```
 [WIP TBD]
