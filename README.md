@@ -20,20 +20,20 @@ $\theta_2 = \sin^{-1}\left(\frac{n_1 \sin{\theta_1}}{n_2}\right)$ <br/> $\theta_
 
 From the diagram, we know that $(x_1, y_1)$ is $(0,1)$. Assuming that y is evenly distributed across varying refractive indices, then $y_N = 1/N$ with $y_1 = 1$ and $y_{last} = 0$. In summary, these are the variables that we need to solve to be able to trace the ray:
 
-Proposed Schematic Solution  |  Variables Required
-:-------------------------:|:-------------------------:
-<img src="approach_1.png" width="370" height="200">  |  $(x_1, y_1) = (0, 1)$ <br/> $(x_2, y_2) = (\textcolor{red}{x_2}, 0.5)$ <br/> $(x_3, y_3) = (\textcolor{red}{x_3}, 0)$
+Proposed Schematic  |  Variables Required
+:------------------:|:------------------:
+<img src="approach_1.png" width="370" height="200">  |  $(x_1, y_1) = (0, 1)$ <br/> $(x_2, y_2) = (\textcolor{red}{x_2, y_2})$ <br/> $(x_3, y_3) = (\textcolor{red}{x_3}, 0)$
 
 Here, $x_N$ can be solved mathematically:
 
 $\sin{\theta_N} = \frac{x_N}{y_N} ⟹ x_N = y_N \sin{\theta_N}$
 
-From above, we must be able to provide $y_N$ and $\theta_N$ to solve for $x_N$.
+From above, we must be able to provide all $y_N$ and $\theta_N$ to solve for $x_N$.
 
 Let's start with $y_N$. Again, since the y's are evenly distributed vertically, they are highly dependent on the number of refractive indices $n_N$:
 
 ```python
-n_N = [1.00, 1.30]                          # given; must be in array/list and in the correct sequence
+n_N = [1.00, 1.30]                          # given; must be an array/list and in the correct sequence
 y_N = [0, 1, 1/len(n_N)]                    # y = 0, 1 for our extrema
                                             # y = 1/len(n_N) for the y's in the middle
 
@@ -41,11 +41,17 @@ while len(y_N) <= len(n_N):
     y_N.append(y[-1] + 1/len(n_N))
 y_N.sort(reverse = True)                    # since we start at y = 1 and end at y = 0
 ```
+Output:
+```python
+print(y_N)
+---
+[1, 0.5, 0]
+```
 
 Next, $\theta_N$ must be solved:
 
 ```python
-theta_init = 15                             # initialize first value (must be given)
+theta_init = 15                             # initial theta; given
 theta_N = [i+j for i, j in zip(n_N, y_N)]
 theta_N.append(thetas_N)                    # our final list of theta_N
 ```
