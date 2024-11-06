@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 """
 Input values:
 """
-N = 50
+N = 2                                # number of indices
 theta_init = 15
 """
 Given values:
