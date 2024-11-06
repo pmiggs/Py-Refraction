@@ -1,9 +1,19 @@
 import numpy as np
 import matplotlib.pyplot as plt
 """
+Input values:
+"""
+N = 100
+
+"""
 Given values:
 """
 n_N = [1.00, 1.30]
+while len(n_N) < N:
+    n_New = n_N[0] + 0.30/N
+    n_N.insert(0, n_New)
+n_N.sort()
+
 theta_init = 15
 y_N = [0, 1, 1/len(n_N)]
 x_N = [0]
