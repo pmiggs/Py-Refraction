@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
 """
 Given values:
 """
@@ -37,9 +36,9 @@ for k in range(len(theta_N)):
 """
 Outputs
 """
-print(x_N)
-print(y_N)
-print(theta_N)
+print("x_N =", x_N)
+print("y_N =", y_N)
+print("theta_N =", theta_N)
 
-plt.plot(x_N, y_N)
+plt.plot(x_N, y_N, marker='o')
 plt.show()
