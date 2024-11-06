@@ -70,7 +70,7 @@ print(theta_N)
 [15, 11]
 ```
 
-From above, the lists of $y_N$ and $theta_N$ are now available, the program to obtain $x_N$ is as follows:
+From above, the lists of $y_N$ and $\theta_N$ are now available, the program to obtain $x_N$ is as follows:
 ```python
 import numpy as np
 
