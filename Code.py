@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 """
 Input values:
 """
-N = 100
-
+N = 50
+theta_init = 15
 """
 Given values:
 """
@@ -14,16 +14,14 @@ while len(n_N) < N:
     n_N.insert(0, n_New)
 n_N.sort()
 
-theta_init = 15
-y_N = [0, 1, 1/len(n_N)]
+y_N = [0, 1]
+while len(y_N) <= len(n_N):
+    y_New = y_N[0] + 1/len(n_N)
+    y_N.insert(0, y_New)
+y_N.sort(reverse = True)
+
 x_N = [0]
 
-"""
-Solving for y_N
-"""
-while len(y_N) <= len(n_N):
-    y_N.append(y[-1] + 1/len(n_N))
-y_N.sort(reverse = True)
 
 """
 Solving for theta_N
@@ -34,7 +32,7 @@ for i in range(len(n_N)-1):
     theta_next = np.arcsin(n_N[i] * np.sin(theta_rad[i]) / n_N[i+1])
     theta_rad.append(theta_next)
 
-theta_N = [round(np.degrees(j)) for j in theta_rad]
+theta_N = [round(np.degrees(j), 2) for j in theta_rad]
 
 """
 Solving for x_N
@@ -50,5 +48,5 @@ print("x_N =", x_N)
 print("y_N =", y_N)
 print("theta_N =", theta_N)
 
-plt.plot(x_N, y_N, marker='o')
+plt.plot(x_N, y_N, marker='.')
 plt.show()
