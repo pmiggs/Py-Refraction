@@ -53,15 +53,38 @@ Next, we need values for $\theta_N$. Although the first value, $\theta_1$ can al
 ```python
 import numpy as np
 
-theta_N = [0.26]                            # given, convert to radians
-n_N = [1.0, 1.30]
+theta_init = 15                           # given, in degrees
+theta_rad = [np.radians(theta_init)]
+n_N = [1.0, 1.30]                         # given
 
-while len(theta_N) < len(n_N):
-    for i in theta_N:
-        if i <= -1 or i >= 1:               # limits of sine function 
-            continue
-    for j in range(len(n_N)-1):
-        theta_next = np.arcsin(j * np.sin(i) / n_N[j+1])
-        theta_N.append(theta_next)
+for i in range(len(n_N)-1):
+    theta_next = np.arcsin(n_N[i] * np.sin(theta_rad[i]) / n_N[i+1])
+    theta_rad.append(theta_next)
+
+theta_N = [round(np.degrees(j)) for j in theta_rad]
+```
+Output:
+```python
+print(theta_N)
+---
+[15, 11]
+```
+
+From above, the lists of $y_N$ and $theta_N$ are now available, the program to obtain $x_N$ is as follows:
+```python
+import numpy as np
+
+theta_N = [0.2618, 0.1920]
+y_N = [1, 0.5, 0]
+x_N = [0]                           # initial value given
+
+for j in range(len(theta_N)):
+    x_next = x_N[j] + (y_N[j] - y_N[j+1]) * np.tan(theta_N[j])
+    x_N.append(x_next)
+```
+Output:
+```python
+print(x_N)
+x_N = [0, 0.13397492429306218, 0.23117223039420248]
 ```
 [WIP TBD]
