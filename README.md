@@ -78,8 +78,8 @@ theta_N = [0.2618, 0.1920]
 y_N = [1, 0.5, 0]
 x_N = [0]                           # initial value given
 
-for j in range(len(theta_N)):
-    x_next = x_N[j] + (y_N[j] - y_N[j+1]) * np.tan(theta_N[j])
+for k in range(len(theta_N)):
+    x_next = x_N[k] + (y_N[k] - y_N[k+1]) * np.tan(theta_N[k])
     x_N.append(x_next)
 ```
 Output:
