@@ -1,11 +1,11 @@
 <h2>Description</h2>
 This was another project I did during my undergraduate program. I was an applicant to one of the prominent research labs in Physics, and this was part of a series of their coding tests.<br/>
 <kbd>
-<img src="Py_Refraction_Problem_Statement.png" width="500" height="600">
+<img src="Py_Refraction_Problem_Statement.jpg" width="500" height="600">
 </kbd>
 <br/>
 <br/>
-This topic is always tackled in the foundational lessons of ray optics.
+This topic is always tackled in the foundational topics of ray optics.
 
 <h2>Programming Proper (WIP)</h2>
 The program is a straightforward utilization of Snell's Law:
@@ -37,8 +37,10 @@ n_N = [1.00, 1.30]                          # given; must be an array/list and i
 y_N = [0, 1, 1/len(n_N)]                    # y = 0, 1 for our extrema
                                             # y = 1/len(n_N) for the y's in the middle
 
+y_N = [0, 1]
 while len(y_N) <= len(n_N):
-    y_N.append(y[-1] + 1/len(n_N))
+    y_New = y_N[0] + 1/len(n_N)
+    y_N.insert(0, y_New)
 y_N.sort(reverse = True)                    # since we start at y = 1 and end at y = 0
 ```
 Output:
@@ -72,8 +74,6 @@ print(theta_N)
 
 From above, the lists of $y_N$ and $\theta_N$ are now available, the program to obtain $x_N$ is as follows:
 ```python
-import numpy as np
-
 theta_N = [0.2618, 0.1920]
 y_N = [1, 0.5, 0]
 x_N = [0]                           # initial value given
