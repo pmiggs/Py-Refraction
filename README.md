@@ -87,4 +87,5 @@ Output:
 print(x_N)
 x_N = [0, 0.13397492429306218, 0.23117223039420248]
 ```
-[WIP TBD]
+
+Compiling the code (see working code in file) and using the library 'matplotlib' for visualization, we get the following:
