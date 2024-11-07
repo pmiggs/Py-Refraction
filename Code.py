@@ -9,13 +9,13 @@ theta_init = 15
 Given values:
 """
 n_N = [1.00, 1.30]
-while len(n_N) < N:
+while len(n_N) < N:                  # n_N is evenly distributed
     n_New = n_N[0] + 0.30/N
     n_N.insert(0, n_New)
 n_N.sort()
 
 y_N = [0, 1]
-while len(y_N) <= len(n_N):
+while len(y_N) <= N:
     y_New = y_N[0] + 1/len(n_N)
     y_N.insert(0, y_New)
 y_N.sort(reverse = True)
