@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 """
 Input values:
 """
-N = 3                                # number of indices
-theta_init = 15
+N = 80                               # number of indices
+theta_init = 45
 """
 Given values:
 """
@@ -16,7 +16,7 @@ n_N.sort()
 
 y_N = [0, 1]
 while len(y_N) <= N:
-    y_New = round(y_N[0] + 1/len(n_N), 3)
+    y_New = y_N[0] + 1/len(n_N)
     y_N.insert(0, y_New)
 y_N.sort(reverse = True)
 
@@ -32,13 +32,13 @@ for i in range(len(n_N)-1):
     theta_next = np.arcsin(n_N[i] * np.sin(theta_rad[i]) / n_N[i+1])
     theta_rad.append(theta_next)
 
-theta_N = [round(np.degrees(j), 2) for j in theta_rad]
+theta_N = [np.degrees(j) for j in theta_rad]
 
 """
 Solving for x_N
 """
 for k in range(len(theta_N)):
-    x_next = round(x_N[k] + (y_N[k] - y_N[k+1]) * np.tan(theta_rad[k]), 3)
+    x_next = x_N[k] + (y_N[k] - y_N[k+1]) * np.tan(theta_rad[k])
     x_N.append(x_next)
     
 """
