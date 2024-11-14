@@ -7,7 +7,7 @@ This was another project I did during my undergraduate program. I was an applica
 <br/>
 This exercise is always tackled in the foundational topics of ray optics.
 
-<h2>Programming Proper (WIP)</h2>
+<h2>Programming Proper</h2>
 The program is a straightforward utilization of Snell's Law:
 
 $n_1 \sin{\theta_1} = n_2 \sin{\theta_2}$ <br/> $n_N \sin{\theta_N} = n_{N+1} \sin{\theta_{N+1}}$  (a more useful form)
