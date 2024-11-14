@@ -94,3 +94,7 @@ x_N = [0, 0.13397492429306218, 0.23117223039420248]
 ```
 
 Compiling the code (see working code in file) and using the library 'matplotlib' for visualization, we get the following:
+
+<kbd>
+<img src="solution.png" width="600" height="350">
+</kbd>
